@@ -3,7 +3,7 @@ import theme from "theme";
 import { Theme, Strong, Text, Icon, Box } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
 import { Override, Menu, StackItem, Stack, Section } from "@quarkly/components";
-import { MdArrowDownward } from "react-icons/md";
+import { MdFace, MdArrowDownward } from "react-icons/md";
 export default (() => {
 	return <Theme theme={theme}>
 		<Helmet>
@@ -46,6 +46,16 @@ export default (() => {
 			<Stack>
 				<StackItem width="75%" lg-width="100%">
 					<Override slot="StackItemContent" flex-direction="column" />
+					<Icon
+						category="md"
+						icon={MdFace}
+						lg-align-self="flex-end"
+						lg-margin="0px 0px 0px 0px"
+						lg-padding="0px 0px 0px 0px"
+						lg-position="relative"
+						lg-top="-25px"
+						lg-left="-61px"
+					/>
 				</StackItem>
 			</Stack>
 			<Box text-align="center" margin="96px 0 0 0">
@@ -55,8 +65,9 @@ export default (() => {
 				<Icon category="md" margin="0 auto" icon={MdArrowDownward} />
 			</Box>
 		</Section>
-		<Stack>
+		<Stack lg-width="50px" lg-display="flex">
 			{"    "}{"    "}
 		</Stack>
+		<Icon category="md" icon={MdFace} />
 	</Theme>;
 });
