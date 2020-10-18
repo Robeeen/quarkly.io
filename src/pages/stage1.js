@@ -1,9 +1,8 @@
 import React from "react";
 import theme from "theme";
-import { Theme, Strong, Text, Icon, Box } from "@quarkly/widgets";
+import { Theme, Box, Button } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
-import { Override, Menu, StackItem, Stack, Section } from "@quarkly/components";
-import { MdArrowDownward } from "react-icons/md";
+import { Override, Section } from "@quarkly/components";
 export default (() => {
 	return <Theme theme={theme}>
 		<Helmet>
@@ -20,43 +19,15 @@ export default (() => {
 			color="--light"
 			font="--base"
 		>
-			<Menu lg-display="flex" lg-width="350px" lg-align-self="center">
-				<Override slot="link-404">
-					Home
-				</Override>
-				<Override slot="link-index">
-					Company
-				</Override>
-				<Override slot="link-stage1">
-					About
-				</Override>
-				<Override
-					slot="link"
-					lg-link-text-decoration-line="initial"
-					lg-link-color="#bdc7d1"
-					lg-text-decoration-line="underline"
-					lg-color="#fff"
-				/>
-			</Menu>
-			<Text lg-margin="-36px 0px 16px 0px" lg-width="150px" lg-display="flex" lg-align-self="flex-start">
-				<Strong>
-					COMPANY NAME
-				</Strong>
-			</Text>
-			<Stack>
-				<StackItem width="75%" lg-width="100%">
-					<Override slot="StackItemContent" flex-direction="column" />
-				</StackItem>
-			</Stack>
-			<Box text-align="center" margin="96px 0 0 0">
-				<Text margin="8px 0" text-transform="uppercase">
-					Who we are
-				</Text>
-				<Icon category="md" margin="0 auto" icon={MdArrowDownward} />
+			<Override slot="SectionContent" lg-height="200px" lg-position="relative" lg-background="rgba(255, 255, 255, 0)" />
+			<Box lg-display="flex" lg-height="100px" lg-background="#e82f2f">
+				<Box lg-width="33.33%" lg-background="#cbb2b2" />
+				<Box lg-width="33.33%" lg-background="#401b1b" />
+				<Box lg-width="33.33%" />
 			</Box>
 		</Section>
-		<Stack>
-			{"    "}{"    "}
-		</Stack>
+		<Button>
+			Button
+		</Button>
 	</Theme>;
 });
