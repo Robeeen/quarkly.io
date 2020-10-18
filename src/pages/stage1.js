@@ -1,8 +1,8 @@
 import React from "react";
 import theme from "theme";
-import { Theme, Strong, Text, Icon, Box } from "@quarkly/widgets";
+import { Theme, Text, Box, Strong, Icon } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
-import { Override, Menu, StackItem, Stack, Section } from "@quarkly/components";
+import { Override, Menu, Section } from "@quarkly/components";
 import { MdArrowDownward } from "react-icons/md";
 export default (() => {
 	return <Theme theme={theme}>
@@ -20,6 +20,25 @@ export default (() => {
 			color="--light"
 			font="--base"
 		>
+			<Box
+				lg-width="150px"
+				lg-height="25px"
+				lg-align-self="flex-end"
+				lg-border-width="1px"
+				lg-border-style="solid"
+				lg-position="relative"
+				lg-top="42px"
+			>
+				<Text
+					lg-position="relative"
+					lg-top="-15px"
+					lg-left="19px"
+					lg-width="120px"
+					lg-margin="14px 0px 16px 0px"
+				>
+					Click to Login
+				</Text>
+			</Box>
 			<Menu lg-display="flex" lg-width="350px" lg-align-self="center">
 				<Override slot="link-404">
 					Home
@@ -38,16 +57,26 @@ export default (() => {
 					lg-color="#fff"
 				/>
 			</Menu>
-			<Text lg-margin="-36px 0px 16px 0px" lg-width="150px" lg-display="flex" lg-align-self="flex-start">
-				<Strong>
+			<Text
+				lg-margin="-36px 0px 16px 0px"
+				lg-width="180px"
+				lg-display="flex"
+				lg-align-self="flex-start"
+				lg-text-transform="uppercase"
+				lg-font="300 20px/24px -apple-system, system-ui, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif"
+			>
+				<Strong
+					overflow-wrap="normal"
+					word-break="normal"
+					white-space="normal"
+					text-indent="0"
+					text-overflow="clip"
+					hyphens="manual"
+					lg-width="180px"
+				>
 					COMPANY NAME
 				</Strong>
 			</Text>
-			<Stack>
-				<StackItem width="75%" lg-width="100%">
-					<Override slot="StackItemContent" flex-direction="column" />
-				</StackItem>
-			</Stack>
 			<Box text-align="center" margin="96px 0 0 0">
 				<Text margin="8px 0" text-transform="uppercase">
 					Who we are
@@ -55,8 +84,6 @@ export default (() => {
 				<Icon category="md" margin="0 auto" icon={MdArrowDownward} />
 			</Box>
 		</Section>
-		<Stack>
-			{"    "}{"    "}
-		</Stack>
+		<Box />
 	</Theme>;
 });
