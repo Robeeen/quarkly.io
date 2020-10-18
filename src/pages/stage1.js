@@ -1,8 +1,8 @@
 import React from "react";
 import theme from "theme";
-import { Theme, Strong, Text, Icon, Box } from "@quarkly/widgets";
+import { Theme, Box, Strong, Text, Icon } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
-import { Override, Menu, StackItem, Stack, Section } from "@quarkly/components";
+import { Override, Menu, Section } from "@quarkly/components";
 import { MdArrowDownward } from "react-icons/md";
 export default (() => {
 	return <Theme theme={theme}>
@@ -20,6 +20,15 @@ export default (() => {
 			color="--light"
 			font="--base"
 		>
+			<Box
+				lg-width="150px"
+				lg-height="25px"
+				lg-align-self="flex-end"
+				lg-border-width="1px"
+				lg-border-style="solid"
+				lg-position="relative"
+				lg-top="42px"
+			/>
 			<Menu lg-display="flex" lg-width="350px" lg-align-self="center">
 				<Override slot="link-404">
 					Home
@@ -43,11 +52,6 @@ export default (() => {
 					COMPANY NAME
 				</Strong>
 			</Text>
-			<Stack>
-				<StackItem width="75%" lg-width="100%">
-					<Override slot="StackItemContent" flex-direction="column" />
-				</StackItem>
-			</Stack>
 			<Box text-align="center" margin="96px 0 0 0">
 				<Text margin="8px 0" text-transform="uppercase">
 					Who we are
@@ -55,8 +59,6 @@ export default (() => {
 				<Icon category="md" margin="0 auto" icon={MdArrowDownward} />
 			</Box>
 		</Section>
-		<Stack>
-			{"    "}{"    "}
-		</Stack>
+		<Box />
 	</Theme>;
 });
