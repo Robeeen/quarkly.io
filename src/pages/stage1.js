@@ -1,9 +1,9 @@
 import React from "react";
 import theme from "theme";
-import { Theme, Strong, Text, Icon, Box } from "@quarkly/widgets";
+import { Theme, Strong, Text, Box, Icon, Button } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
-import { Override, Menu, StackItem, Stack, Section } from "@quarkly/components";
-import { MdArrowDownward } from "react-icons/md";
+import { Override, Menu, Section } from "@quarkly/components";
+import { MdFindReplace } from "react-icons/md";
 export default (() => {
 	return <Theme theme={theme}>
 		<Helmet>
@@ -19,44 +19,158 @@ export default (() => {
 			sm-padding="40px 0"
 			color="--light"
 			font="--base"
+			lg-height="400px"
+			lg-padding="65px 0 64px 0"
 		>
-			<Menu lg-display="flex" lg-width="350px" lg-align-self="center">
-				<Override slot="link-404">
-					Home
-				</Override>
-				<Override slot="link-index">
-					Company
-				</Override>
-				<Override slot="link-stage1">
-					About
-				</Override>
-				<Override
-					slot="link"
-					lg-link-text-decoration-line="initial"
-					lg-link-color="#bdc7d1"
-					lg-text-decoration-line="underline"
-					lg-color="#fff"
-				/>
-			</Menu>
-			<Text lg-margin="-36px 0px 16px 0px" lg-width="150px" lg-display="flex" lg-align-self="flex-start">
+			<Override slot="SectionContent" lg-height="400px" lg-position="relative" lg-background="rgba(255, 255, 255, 0)" />
+			<Box
+				lg-display="flex"
+				lg-height="100px"
+				lg-background="rgba(202, 56, 56, 0)"
+				lg-width="100%"
+				display="flex"
+			>
+				<Box lg-width="33.33%" width="33.33%" display="flex" align-self="center">
+					<Text lg-text-transform="uppercase" lg-font="200 25px/24px --fontFamily-sansVerdana">
+						<Strong
+							overflow-wrap="normal"
+							word-break="normal"
+							white-space="normal"
+							text-indent="0"
+							text-overflow="clip"
+							hyphens="manual"
+						>
+							COMPANY NAME
+						</Strong>
+					</Text>
+				</Box>
+				<Box
+					lg-width="33.33%"
+					lg-background="rgba(64, 27, 27, 0)"
+					width="33.33%"
+					display="flex"
+					position="relative"
+					align-self="center"
+					height="154.961px"
+				>
+					<Menu lg-display="flex" display="flex" align-self="center" text-decoration-line="underline">
+						<Override
+							slot="link"
+							lg-link-text-decoration-line="underline"
+							lg-color="#ecf0f3"
+							lg-font="300 16px/16px -apple-system, system-ui, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif"
+							color="#d6dee3"
+							link-text-decoration-line="underline"
+							link-color="#fbfbfb"
+						/>
+						<Override slot="link-404">
+							Home
+						</Override>
+						<Override slot="link-index">
+							About
+						</Override>
+						<Override slot="item" lg-text-decoration-line="underline" />
+						<Override slot="link-stage1">
+							ПPRoducts
+						</Override>
+						<Override slot="link-contact">
+							Contact
+						</Override>
+					</Menu>
+				</Box>
+				<Box
+					lg-width="33.33%"
+					lg-display="inline"
+					width="33.33%"
+					display="flex"
+					position="relative"
+				>
+					<Icon
+						category="md"
+						icon={MdFindReplace}
+						lg-display="flex"
+						lg-margin="15px 0px 0px 115px"
+						align-self="center"
+						position="relative"
+						left="236px"
+					/>
+					<Button
+						lg-height="38px"
+						lg-hover-background="#ccbf00"
+						lg-border-width="1px"
+						lg-border-style="solid"
+						lg-border-color="#605c5c"
+						lg-background="#252828"
+						lg-padding="4px 24px 8px 24px"
+						lg-text-align="center"
+						lg-margin="-27px 0px 0px 150px"
+						lg-display="flex"
+						align-self="center"
+						position="relative"
+						left="257px"
+						border-width="1px"
+						border-style="solid"
+						background="#282929"
+					>
+						Click to Login
+					</Button>
+				</Box>
+			</Box>
+			<Text
+				lg-width="600px"
+				lg-align-self="center"
+				lg-position="relative"
+				lg-top="59px"
+				lg-bottom="-34px"
+			>
 				<Strong>
-					COMPANY NAME
+					We are giving you the best!
 				</Strong>
 			</Text>
-			<Stack>
-				<StackItem width="75%" lg-width="100%">
-					<Override slot="StackItemContent" flex-direction="column" />
-				</StackItem>
-			</Stack>
-			<Box text-align="center" margin="96px 0 0 0">
-				<Text margin="8px 0" text-transform="uppercase">
-					Who we are
-				</Text>
-				<Icon category="md" margin="0 auto" icon={MdArrowDownward} />
+			<Text
+				lg-font="570 60px/3 --fontFamily-sansHeavy"
+				lg-width="600px"
+				lg-align-self="center"
+				lg-position="relative"
+				lg-height="84.098px"
+				lg-top="-13px"
+			>
+				IT Products
+			</Text>
+			<Text lg-align-self="center" lg-width="600px" lg-height="7.988px" lg-margin="25px 0px 16px 0px">
+				<Strong
+					lg-height="auto"
+					lg-margin="0px 0px 0px 0px"
+					lg-padding="0px 0px 0px 0px"
+					lg-position="relative"
+					lg-top="-7px"
+					overflow-wrap="normal"
+					word-break="normal"
+					white-space="normal"
+					text-indent="0"
+					text-overflow="clip"
+					hyphens="manual"
+				>
+					in the Shortest Time.
+				</Strong>
+			</Text>
+			<Box
+				lg-width="600px"
+				lg-align-self="center"
+				lg-height="50px"
+				lg-position="relative"
+				lg-top="11px"
+			>
+				<Button lg-position="relative" lg-right="0px">
+					Click for More
+				</Button>
+				<Button lg-position="relative" lg-left="10px" lg-background="#131617">
+					Go to Next
+				</Button>
 			</Box>
 		</Section>
-		<Stack>
-			{"    "}{"    "}
-		</Stack>
+		<Section padding="100px 0" sm-padding="40px 0" lg-background="rgba(24, 24, 25, 0.92)">
+			<Override slot="SectionContent" align-items="center" lg-height="250px" />
+		</Section>
 	</Theme>;
 });
